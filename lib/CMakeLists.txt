@@ -6,7 +6,13 @@ set(SOURCE_FILES
         src/Vip.cpp
         src/NonVip.cpp
         src/ClientType.cpp
-)
+        src/Reservation.cpp
+        src/Machine.cpp
+        src/Repository.cpp
+        src/ReservationsRepository.cpp
+        src/MachinesRepository.cpp
+        src/ClientsRepository.cpp
+        src/Exception.cpp include/ReservationsManager.cpp include/ReservationsManager.h)
 
 
 add_library(Lib ${SOURCE_FILES})
