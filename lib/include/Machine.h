@@ -19,6 +19,8 @@ public:
     std::string getOs();
     std::string getVersion();
     std::string getKernelVersion();
+    void endRent();
+    void startRent();
 };
 
 typedef  std::shared_ptr <Machine> Machine_ptr;
