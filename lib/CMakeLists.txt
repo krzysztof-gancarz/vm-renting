@@ -5,7 +5,7 @@ set(SOURCE_FILES
     src/Client.cpp
 )
 
-add_library(Biblioteka ${SOURCE_FILES})
+add_library(Lib ${SOURCE_FILES})
 
 target_include_directories(Lib PUBLIC include)
 

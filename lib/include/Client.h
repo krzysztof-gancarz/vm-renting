@@ -12,7 +12,7 @@ public:
 
 
 
-    std::string ClientInfo();
+    std::string clientInfo();
 
     std::string getName() {
         return this->name;

@@ -1,17 +1,16 @@
 
 #include <iostream>
 #include <sstream>
-
 #include "Client.h"
 
 using namespace std;
 
-Client::Client(std::name, std::address) {
+Client::Client(std::string name, std::string address) {
 
-    if (name == "")
+    /*if (name == "")
         throw ClientException("No name(required)");
     if (address == "")
-        throw ClientException("No address(required)");
+        throw ClientException("No address(required)");*/
 
     this->name = name;
     this->address = address;

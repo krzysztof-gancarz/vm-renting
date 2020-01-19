@@ -16,6 +16,5 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_VERBOSE_MAKEFILE TRUE) 
 
 add_subdirectory(program)
-add_subdirectory(biblioteka)
+add_subdirectory(lib)
 
-enable_testing()
