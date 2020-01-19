@@ -18,4 +18,3 @@ set(CMAKE_VERBOSE_MAKEFILE TRUE)
 add_subdirectory(program)
 add_subdirectory(lib)
 
-enable_testing()
