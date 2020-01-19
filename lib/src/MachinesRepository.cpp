@@ -7,14 +7,15 @@
 
 #include <iostream>
 
-void MachineRepository::add(Machine_ptr machine, std::vector <Machine_ptr> machines) {
-    machines.push_back(machine);
+void MachineRepository::add(Machine_ptr machine) {
+    items.push_back(machine);
 }
 
-void MachineRepository::remove(Machine_ptr machine, std::vector <Machine_ptr> machines) {
-    for (int i=0; i<machines.size(); i++)
-        if(machines[i]==machine){
-            machines.erase(machines.begin()+i);
+void MachineRepository::remove(Machine_ptr machine) {
+
+    for (int i=0; i<items.size(); i++)
+        if(items[i]==machine){
+            items.erase(items.begin()+i);
         }
 }
 

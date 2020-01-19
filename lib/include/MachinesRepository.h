@@ -8,10 +8,12 @@
 #include "Machine.h"
 
 class MachinesRepository : public Repository {
+    std::vector <Machine_ptr> items;
 public:
     MachinesRepository();
-    void add(Machine_ptr machine, std::vector <Machine_ptr> machines);
-    void remove(Machine_ptr machine, std::vector <Machine_ptr> machines);
+    void add(Machine_ptr machine);
+    void remove(Machine_ptr machine;
+    virtual ~MachinesRepository();
 
 };
 
