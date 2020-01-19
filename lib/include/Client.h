@@ -1,8 +1,11 @@
 
 
 #include <iostream>
+#include <memory>
 #include "ClientType.h"
 #include <boost/uuid/uuid.hpp>
+
+
 
 class Client{
     std::string name;
@@ -26,4 +29,5 @@ public:
 
     const Type_ptr getClientType() const;
 };
+typedef std::shared_ptr  <Client> Client_ptr;
 

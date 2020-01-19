@@ -11,6 +11,7 @@ class Machine{
     std:string kernelVersion;
     std:string version;
     std:string os;
+    bool isRented;
 
 public:
     Machine(std::string kernelVersion, std::string version, std::string os);
