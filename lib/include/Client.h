@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include "ClientType.h"
+#include <boost/uuid/uuid.hpp>
 
 
 
@@ -10,6 +11,7 @@ class Client{
     std::string name;
     std::string address;
     Type_ptr clientType;
+    boost::uuids::uuid UUID;
 
 public:
     Client(std::string name, std::string address, bool isVip);
