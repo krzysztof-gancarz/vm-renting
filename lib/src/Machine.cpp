@@ -1,7 +1,7 @@
 //
 // Created by student on 19.01.2020.
 //
-#include <Machine.cpp>
+#include <Machine.h>
 #include "Exception.hpp"
 
 Machine::Machine(std::string kernelVersion, std::string version,std::string os) :
