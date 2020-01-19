@@ -3,7 +3,7 @@ project(Lib)
 
 set(SOURCE_FILES
     src/Client.cpp
-)
+        src/ClientType.cpp include/ClientType.h src/Vip.cpp include/Vip.h src/NonVip.cpp include/NonVip.h)
 
 add_library(Lib ${SOURCE_FILES})
 
