@@ -2,6 +2,8 @@
 #include <iostream>
 #include <sstream>
 
+3#include "Client.h"
+
 using namespace std;
 
 Client::Client(std::name, std::address) {
@@ -10,6 +12,9 @@ Client::Client(std::name, std::address) {
         throw ClientException("No name(required)");
     if (address == "")
         throw ClientException("No address(required)");
+
+    this->name = name;
+    this->address = address;
 }
 
 string Client::clientInfo() {
