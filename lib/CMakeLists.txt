@@ -2,18 +2,12 @@ cmake_minimum_required(VERSION 3.4)
 project(Lib)
 
 set(SOURCE_FILES
-<<<<<<< HEAD
-    src/Client.cpp
-        src/ClientType.cpp include/ClientType.h src/Vip.cpp include/Vip.h src/NonVip.cpp include/NonVip.h)
-=======
         src/Client.cpp
-        src/ClientsRepository.cpp
-        src/Machine.cpp
-        src/MachinesRepository.cpp
-        src/Repository.cpp
-        src/ReservationsRepository.cpp
+        src/Vip.cpp
+        src/NonVip.cpp
+        src/ClientType.cpp
 )
->>>>>>> 30788986c4d3177b7e6dadbccb493fa738b99a83
+
 
 add_library(Lib ${SOURCE_FILES})
 

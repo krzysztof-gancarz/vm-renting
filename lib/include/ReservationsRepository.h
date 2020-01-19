@@ -9,7 +9,7 @@
 class ReservationsRepository : public Repository{
 
 public:
-    virtual ReservationsRepository();
+    ReservationsRepository();
     virtual ~ReservationsRepository();
 
     void getInfo();
@@ -17,7 +17,7 @@ public:
     void setVipMaxReservations();
     void setNonVipMaxReservations();
 
-    void add(); items.push_back();
+    void add();
     void remove();
 };
 

@@ -9,6 +9,7 @@
 
 class MachinesRepository {
 public:
+    MachinesRepository();
     void add(Machine_ptr machine, std::vector <Machine_ptr> machines);
     void remove(Machine_ptr machine, std::vector <Machine_ptr> machines);
 
