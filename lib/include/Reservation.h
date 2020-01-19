@@ -17,7 +17,7 @@ class Reservation {
 public:
     Reservation(Machine_ptr machinePtr, Client_ptr clientPtr);
     void endReservation();
-    std::string getInfo();
+    bool getInfo();
     std::string getBegin();
     std::string getEnd();
 

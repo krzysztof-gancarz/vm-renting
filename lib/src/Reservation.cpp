@@ -16,3 +16,15 @@ void Reservation::endReservation() {
     end = boost::posix_time::second_clock::universal_time();
     machine->endRent();
 }
+
+std::string Reservation::getBegin() {
+    return boost::posix_time::to_simple_string(begin);
+}
+
+std::string Reservation::getEnd() {
+    return boost::posix_time::to_simple_string(end);
+}
+
+bool Reservation::getInfo() {
+    return machine->getStatus();
+}

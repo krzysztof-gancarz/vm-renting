@@ -3,7 +3,7 @@
 #include "Client.h"
 #include "Vip.h"
 
-BOOST_AUTO_TEST_SUITE(TestSuiteCorrect)
+BOOST_AUTO_TEST_SUITE(ClientTest)
 
 BOOST_AUTO_TEST_CASE(ClientFirstNameCase) {
         Client client1("Jan", "Sadowa 5", true);
