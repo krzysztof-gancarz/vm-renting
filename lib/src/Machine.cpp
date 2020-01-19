@@ -17,10 +17,17 @@ std::string Machine::getKernelVersion() {
     return kernelVersion;
 }
 
-std::string Child::getVersion() {
+std::string Machine::getVersion() {
     return version;
 }
 
-std::string Child::getOs() {
+std::string Machine::getOs() {
     return os;
+}
+
+string Machine::machineInfo() {
+    stringstream n;
+    n << kernelVersion << " : " << version << " : " << os << "\n";
+
+    return n.str();
 }

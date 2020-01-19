@@ -18,6 +18,7 @@ public:
     std::string getOs();
     std::string getVersion();
     std::string getKernelVersion();
+    std::string machineInfo();
 };
 
 typedef  std::shared_ptr <Machine> Machine_ptr;
