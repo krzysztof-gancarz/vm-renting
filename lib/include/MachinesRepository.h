@@ -7,7 +7,7 @@
 
 #include "Machine.h"
 
-class MachinesRepository {
+class MachinesRepository : public Repository {
 public:
     MachinesRepository();
     void add(Machine_ptr machine, std::vector <Machine_ptr> machines);

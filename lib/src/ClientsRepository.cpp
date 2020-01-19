@@ -3,3 +3,11 @@
 //
 
 #include "../include/ClientsRepository.h"
+
+ClientsRepository::ClientsRepository() {
+
+}
+
+ClientsRepository::~ClientsRepository() {
+
+}

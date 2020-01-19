@@ -3,3 +3,7 @@
 //
 
 #include "../include/ReservationsRepository.h"
+
+ReservationsRepository::~ReservationsRepository() {
+
+};

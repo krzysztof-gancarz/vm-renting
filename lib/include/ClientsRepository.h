@@ -6,7 +6,10 @@
 #define POBI_CLIENTSREPOSITORY_H
 
 
-class ClientsRepository {
+class ClientsRepository : public Reservations {
+public:
+    ClientsRepository();
+    virtual ~ClientsRepository();
 
 };
 
