@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.4)
 project(Lib)
 
 set(SOURCE_FILES
-    src/Client.cpp
+        src/Client.cpp
+        src/ClientsRepository.cpp
+        src/Machine.cpp
+        src/MachinesRepository.cpp
+        src/Repository.cpp
+        src/ReservationsRepository.cpp
 )
 
 add_library(Lib ${SOURCE_FILES})
