@@ -22,7 +22,7 @@ target_include_directories(Lib PUBLIC include)
 
 enable_testing()
 
-find_package (Boost 1.60.0 COMPONENTS "unit_test_framework" "date_time"  REQUIRED)
+find_package (Boost 1.60.0 COMPONENTS unit_test_framework date_time  REQUIRED)
 
 include_directories(
  ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -42,6 +42,7 @@ target_link_libraries (TestLib
  Lib
  ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
  )
+target_link_libraries( Lib ${Boost_DATE_TIME_LIBRARY} )
 
 
 add_test(TestAll TestLib
