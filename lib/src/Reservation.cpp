@@ -5,7 +5,7 @@
 #include "Reservation.h"
 
 Reservation::Reservation(Machine_ptr machinePtr, Client_ptr clientPtr) {
-    this->ID = boost::uuids::random_generator()();
+    this->UUID = boost::uuids::random_generator()();
     this->client = clientPtr;
     this->machine = machinePtr;
     machine->startRent();
@@ -28,5 +28,9 @@ std::string Reservation::getEnd() {
 
 bool Reservation::getInfo() {
     return machine->getStatus();
+}
+
+boost::uuids::uuid Reservation::getUuid() {
+    return UUID;
 }
 

@@ -5,20 +5,21 @@
 #ifndef POBI_RESERVATIONSREPOSITORY_H
 #define POBI_RESERVATIONSREPOSITORY_H
 
+#include <vector>
+#include <boost/uuid/uuid.hpp>
+#include "Repository.h"
+#include "Reservation.h"
 
 class ReservationsRepository : public Repository{
+    std::vector <Reservation_ptr> items;
 
 public:
     ReservationsRepository();
     virtual ~ReservationsRepository();
-
-    void getInfo();
-    void getItems();
-    void setVipMaxReservations();
-    void setNonVipMaxReservations();
-
-    void add(Reservation_ptr reservation, std::vector <Reservation_ptr> reservations);
-    void remove(Reservation_ptr reservation, std::vector <Reservation_ptr> reservations);
+    Reservation_ptr getById(boost::uuids::uuid UUID);
+    int getIndexById(boost::uuids::uuid UUID);
+    void add(Reservation_ptr reservation);
+    void remove(int i);
 };
 
 

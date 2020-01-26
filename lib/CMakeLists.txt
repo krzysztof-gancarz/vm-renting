@@ -8,12 +8,13 @@ set(SOURCE_FILES
         src/ClientType.cpp
         src/Reservation.cpp
         src/Machine.cpp
-        #src/Repository.cpp
-        #src/ReservationsRepository.cpp
-        #src/MachinesRepository.cpp
-        #src/ClientsRepository.cpp
+        src/Repository.cpp
+        src/ReservationsRepository.cpp
+        src/MachinesRepository.cpp
+        src/ClientsRepository.cpp
         src/Exception.cpp
-        src/ReservationsManager.cpp)
+        src/ReservationsManager.cpp src/MachinesManager.cpp src/ClientsManager.cpp)
+
 
 
 add_library(Lib ${SOURCE_FILES})
