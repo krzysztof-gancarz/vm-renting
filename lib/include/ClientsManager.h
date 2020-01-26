@@ -8,6 +8,7 @@
 
 class ClientsManager {
 public:
+    ClientsManager();
     void createClient();
     void listClients();
 

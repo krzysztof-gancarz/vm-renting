@@ -11,6 +11,8 @@ class Client;
 typedef std::shared_ptr <Client> Client_ptr;
 
 
+
+
 class Reservation {
     boost::uuids::uuid UUID;
     boost::posix_time::ptime begin;

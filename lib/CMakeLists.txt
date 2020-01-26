@@ -18,6 +18,8 @@ set(SOURCE_FILES
         src/ClientsManager.cpp)
 
 
+
+
 add_library(Lib ${SOURCE_FILES})
 
 target_include_directories(Lib PUBLIC include)

@@ -6,14 +6,28 @@
 
 #include <iostream>
 
-void ClientsRepository::addClient(Client_ptr client) {
+void ClientsRepository::add(Client_ptr client) {
     items.push_back(client);
 }
 
-void ClientRepository::remove(Client_ptr client) {
-
-    for (int i=0; i<items.size(); i++)
-        if(items[i]==client){
-            items.erase(items.begin()+i);
+Client_ptr ClientsRepository::getById(boost::uuids::uuid UUID) {
+    for (int i = 0; i < items.size(); i++) {
+        if (items[i]->getID() == UUID) {
+            return items[i];
         }
+    }
+    return nullptr;
+}
+int ClientsRepository::getIndexById(boost::uuids::uuid UUID) {
+    for (int i = 0; i < items.size(); i++) {
+        if (items[i]->getID() == UUID) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void ClientsRepository::remove(int i) {
+    items.erase(items.begin()+i);
+
 }

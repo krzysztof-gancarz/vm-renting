@@ -8,6 +8,6 @@
 using namespace std;
 
 ParameterException::ParameterException(string s):
-        logic_errors(s)
+        logic_error(s)
 
 {}

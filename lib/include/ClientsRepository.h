@@ -17,7 +17,7 @@ public:
     Client_ptr getById(boost::uuids::uuid UUID);
     int getIndexById(boost::uuids::uuid UUID);
     void add(Client_ptr client);
-    void remove(Client_ptr client);
+    void remove(int i);
     virtual ~ClientsRepository();
 
 

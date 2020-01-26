@@ -7,6 +7,7 @@
 
 class MachinesManager {
 public:
+    MachinesManager();
     void createMachine();
     void listMachines();
 

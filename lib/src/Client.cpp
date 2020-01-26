@@ -4,18 +4,21 @@
 #include <Vip.h>
 #include <NonVip.h>
 #include "Client.h"
+#include "Exception.h"
+#include <boost/uuid/random_generator.hpp>
 
 using namespace std;
 
 Client::Client(std::string name, std::string address, std::string birth, bool isVip) {
 
-    /*if (name == "")
-        throw ClientException("No name(required)");
-    if (address == "")
-        throw ClientException("No address(required)");*/
+
+    if(name=="") throw ParameterException("Brak nazwy klienta [REQUIRED].");
+    if(address=="") throw ParameterException("Brak adresu klienta [REQUIRED].");
+    if(birth=="") throw ParameterException("Brak daty urodzenia klienta [REQUIRED].");
 
     this->name = name;
     this->address = address;
+    this->UUID = boost::uuids::random_generator()();
     clientType = setClientType(isVip);
     birthDate = boost::gregorian::date(boost::gregorian::from_string(birth));
 }

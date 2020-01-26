@@ -2,17 +2,19 @@
 // Created by student on 19.01.2020.
 //
 
-#ifndef POBI_MACHINE_H
-#define POBI_MACHINE_H
+#ifndef MACHINE_H
+#define MACHINE_H
 
 #include <string>
 #include <memory>
 #include <sstream>
+#include <boost/uuid/uuid.hpp>
 
 class Machine {
     std::string kernelVersion;
     std::string version;
     std::string os;
+    boost::uuids::uuid UUID;
     bool isRented;
 
 public:
@@ -21,6 +23,7 @@ public:
     std::string getOs();
     std::string getVersion();
     std::string getKernelVersion();
+    boost::uuids::uuid getUuid();
     void endRent();
     void startRent();
     std::string machineInfo();
