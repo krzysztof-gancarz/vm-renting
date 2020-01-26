@@ -7,8 +7,11 @@
 #include <boost/date_time.hpp>
 #include "Machine.h"
 #include "Client.h"
-
+class Client;
+typedef std::shared_ptr <Client> Client_ptr;
 typedef std::shared_ptr <Reservation> Reservation_ptr;
+
+
 
 class Reservation {
     boost::uuids::uuid ID;
@@ -25,6 +28,6 @@ public:
 
 
 };
-
+typedef std::shared_ptr <Reservation> Reservation_ptr;
 
 #endif //VM_RENTING_RESERVATION_H
