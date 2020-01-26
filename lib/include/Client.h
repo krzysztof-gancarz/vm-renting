@@ -22,13 +22,14 @@ public:
 
 
     Type_ptr setClientType(bool isVip);
-    std::string clientInfo();
+
 
     std::vector<Reservation_ptr> getReservations();
     void addReservation(Reservation_ptr reservation);
 
     std::string getName();
     std::string getAddress();
+    std::string clientInfo();
     boost::gregorian::greg_year_month_day getBirthDate();
 
     boost::uuids::uuid getID();

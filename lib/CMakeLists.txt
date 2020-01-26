@@ -12,7 +12,7 @@ set(SOURCE_FILES
         #src/ReservationsRepository.cpp
         #src/MachinesRepository.cpp
         #src/ClientsRepository.cpp
-        #src/Exception.cpp
+        src/Exception.cpp
         src/ReservationsManager.cpp)
 
 

@@ -9,7 +9,7 @@
 #include "Client.h"
 class Client;
 typedef std::shared_ptr <Client> Client_ptr;
-typedef std::shared_ptr <Reservation> Reservation_ptr;
+
 
 
 

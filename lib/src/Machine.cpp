@@ -2,12 +2,17 @@
 // Created by student on 19.01.2020.
 //
 #include "Machine.h"
+#include "Exception.h"
 
 
 Machine::Machine(std::string kernelVersion, std::string version, std::string os) {
     this->kernelVersion = kernelVersion;
     this->version = version;
     this->os = os;
+
+    if(kernelVersion=="") throw ParameterException("Brak wersji kernela [REQUIRED].");
+    if(version=="") throw ParameterException("Brak wersji [REQUIRED].");
+    if(os=="") throw ParameterException("Brak os [REQUIRED].");
 }
 
 Machine::~Machine() {
