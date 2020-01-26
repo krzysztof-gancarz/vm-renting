@@ -30,6 +30,8 @@ public:
     std::string getAddress();
     boost::gregorian::greg_year_month_day getBirthDate();
 
+    boost::uuids::uuid getID();
+
     const Type_ptr getClientType() const;
 };
 typedef std::shared_ptr  <Client> Client_ptr;

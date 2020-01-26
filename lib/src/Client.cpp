@@ -55,3 +55,9 @@ void Client::addReservation(Reservation* reservation) {
 std::vector<Reservation*> Client::getReservations() {
     return reservations;
 }
+
+
+boost::uuids::uuid Client::getID() {
+    return UUID;
+}
+

@@ -17,8 +17,8 @@ public:
     void setVipMaxReservations();
     void setNonVipMaxReservations();
 
-    void add();
-    void remove();
+    void add(Reservation_ptr reservation, std::vector <Reservation_ptr> reservations);
+    void remove(Reservation_ptr reservation, std::vector <Reservation_ptr> reservations);
 };
 
 
