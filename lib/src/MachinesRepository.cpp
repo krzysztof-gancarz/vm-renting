@@ -3,6 +3,7 @@
 //
 
 #include "../include/MachinesRepository.h"
+#include "Exception.h"
 
 MachinesRepository::MachinesRepository() {
 
@@ -18,6 +19,9 @@ Machine_ptr MachinesRepository::getById(boost::uuids::uuid UUID) {
         if (items[i]->getUuid() == UUID) {
             return items[i];
         }
+        else {
+            throw ParameterException("Brak takiego ID ");
+        }
     }
     return nullptr;
 }
@@ -25,6 +29,9 @@ int MachinesRepository::getIndexById(boost::uuids::uuid UUID) {
     for (int i = 0; i < items.size(); i++) {
         if (items[i]->getUuid() == UUID) {
             return i;
+        }
+        else {
+            throw ParameterException("Brak pasujacego indeksu ");
         }
     }
     return -1;
