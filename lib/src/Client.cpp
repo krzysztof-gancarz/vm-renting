@@ -48,11 +48,11 @@ boost::gregorian::greg_year_month_day Client::getBirthDate() {
     return birthDate.year_month_day();
 }
 
-void Client::addReservation(Reservation* reservation) {
+void Client::addReservation(Reservation_ptr reservation) {
     reservations.push_back(reservation);
 }
 
-std::vector<Reservation*> Client::getReservations() {
+std::vector<Reservation_ptr> Client::getReservations() {
     return reservations;
 }
 
@@ -61,3 +61,4 @@ boost::uuids::uuid Client::getID() {
     return UUID;
 }
 
+typedef std::shared_ptr <Client> Client_ptr;

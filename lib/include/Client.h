@@ -7,7 +7,8 @@
 #include "Reservation.h"
 #include <boost/uuid/uuid.hpp>
 #include <boost/date_time.hpp>
-
+class Reservation;
+typedef std::shared_ptr <Reservation> Reservation_ptr;
 
 class Client{
     std::string name;
@@ -15,7 +16,7 @@ class Client{
     Type_ptr clientType;
     boost::uuids::uuid UUID;
     boost::gregorian::date birthDate;
-    std::vector<Reservation*> reservations;
+    std::vector<Reservation_ptr> reservations;
 public:
     Client(std::string name, std::string address, std::string birth, bool isVip);
 
@@ -23,8 +24,8 @@ public:
     Type_ptr setClientType(bool isVip);
     std::string clientInfo();
 
-    std::vector<Reservation*> getReservations();
-    void addReservation(Reservation* reservation);
+    std::vector<Reservation_ptr> getReservations();
+    void addReservation(Reservation_ptr reservation);
 
     std::string getName();
     std::string getAddress();
@@ -34,6 +35,7 @@ public:
 
     const Type_ptr getClientType() const;
 };
-typedef std::shared_ptr  <Client> Client_ptr;
+typedef std::shared_ptr <Client> Client_ptr;
+
 
 #endif
