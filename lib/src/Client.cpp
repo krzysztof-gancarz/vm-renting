@@ -7,7 +7,7 @@
 
 using namespace std;
 
-Client::Client(std::string name, std::string address, bool isVip) {
+Client::Client(std::string name, std::string address, std::string birth, bool isVip) {
 
     /*if (name == "")
         throw ClientException("No name(required)");
@@ -17,6 +17,7 @@ Client::Client(std::string name, std::string address, bool isVip) {
     this->name = name;
     this->address = address;
     clientType = setClientType(isVip);
+    birthDate = boost::gregorian::date(boost::gregorian::from_string(birth));
 }
 
 string Client::clientInfo() {
@@ -34,4 +35,23 @@ Type_ptr Client::setClientType(bool isVip) {
 
 const Type_ptr Client::getClientType() const {
     return clientType;
+}
+
+std::string Client::getAddress() {
+    return address;
+}
+
+std::string Client::getName() {
+    return name;
+}
+boost::gregorian::greg_year_month_day Client::getBirthDate() {
+    return birthDate.year_month_day();
+}
+
+void Client::addReservation(Reservation* reservation) {
+    reservations.push_back(reservation);
+}
+
+std::vector<Reservation*> Client::getReservations() {
+    return reservations;
 }
