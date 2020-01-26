@@ -5,6 +5,7 @@
 #include <NonVip.h>
 #include "Client.h"
 #include "Exception.h"
+#include <boost/uuid/random_generator.hpp>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ Client::Client(std::string name, std::string address, std::string birth, bool is
 
     this->name = name;
     this->address = address;
+    this->UUID = boost::uuids::random_generator()();
     clientType = setClientType(isVip);
     birthDate = boost::gregorian::date(boost::gregorian::from_string(birth));
 }

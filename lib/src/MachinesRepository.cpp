@@ -4,18 +4,32 @@
 
 #include "../include/MachinesRepository.h"
 
+MachinesRepository::MachinesRepository() {
 
-#include <iostream>
+}
 
-void MachineRepository::add(Machine_ptr machine) {
+
+void MachinesRepository::add(Machine_ptr machine) {
     items.push_back(machine);
 }
 
-void MachineRepository::remove(Machine_ptr machine) {
-
-    for (int i=0; i<items.size(); i++)
-        if(items[i]==machine){
-            items.erase(items.begin()+i);
+Machine_ptr MachinesRepository::getById(boost::uuids::uuid UUID) {
+    for (int i = 0; i < items.size(); i++) {
+        if (items[i]->getUuid() == UUID) {
+            return items[i];
         }
+    }
+    return nullptr;
+}
+int MachinesRepository::getIndexById(boost::uuids::uuid UUID) {
+    for (int i = 0; i < items.size(); i++) {
+        if (items[i]->getUuid() == UUID) {
+            return i;
+        }
+    }
+    return -1;
 }
 
+void MachinesRepository::remove(int i) {
+    items.erase(items.begin() + i);
+}
