@@ -7,7 +7,10 @@
 
 
 class ReservationsManager {
-
+public:
+    void createReservation();
+    void updateReservations(); //checks if reservations has ended
+    void listReservations();
 
 };
 

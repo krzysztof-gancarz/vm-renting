@@ -12,7 +12,7 @@ typedef std::shared_ptr <Client> Client_ptr;
 
 
 class Reservation {
-    boost::uuids::uuid ID;
+    boost::uuids::uuid UUID;
     boost::posix_time::ptime begin;
     boost::posix_time::ptime end;
     Client_ptr client;
@@ -21,6 +21,7 @@ public:
     Reservation(Machine_ptr machinePtr, Client_ptr clientPtr);
     void endReservation();
     bool getInfo();
+    boost::uuids::uuid getUuid();
     std::string getBegin();
     std::string getEnd();
 
