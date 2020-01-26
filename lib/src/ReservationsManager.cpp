@@ -5,10 +5,8 @@
 #ifndef VM_RENTING_RESERVATIONSMANAGER_H
 #define VM_RENTING_RESERVATIONSMANAGER_H
 
+#include "ReservationsManager.h"
 
-class ReservationsManager {
-
-};
 
 
 #endif //VM_RENTING_RESERVATIONSMANAGER_H

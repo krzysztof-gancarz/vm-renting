@@ -13,7 +13,9 @@ set(SOURCE_FILES
         src/MachinesRepository.cpp
         src/ClientsRepository.cpp
         #src/Exception.cpp
-        src/ReservationsManager.cpp src/MachinesManager.cpp src/ClientsManager.cpp)
+        src/ReservationsManager.cpp
+        src/MachinesManager.cpp
+        src/ClientsManager.cpp)
 
 
 add_library(Lib ${SOURCE_FILES})
