@@ -20,12 +20,6 @@ public:
     Type_ptr setClientType(bool isVip);
     std::string clientInfo();
 
-    std::string getName() {
-        return this->name;
-    }
-    std::string getAddress() {
-        return this->address;
-    }
 
     const Type_ptr getClientType() const;
 };

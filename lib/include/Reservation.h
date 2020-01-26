@@ -8,6 +8,8 @@
 #include "Machine.h"
 #include "Client.h"
 
+typedef std:shared_ptr <Reservation> Reservation_ptr;
+
 class Reservation {
     boost::uuids::uuid ID;
     boost::posix_time::ptime begin;

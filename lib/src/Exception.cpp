@@ -7,7 +7,7 @@
 
 using namespace std;
 
-ParameterException::ParameterException(std::string s):
+ParameterException::ParameterException(string s):
         logic_errors(s)
 
 {}

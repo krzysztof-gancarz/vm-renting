@@ -35,3 +35,18 @@ Type_ptr Client::setClientType(bool isVip) {
 const Type_ptr Client::getClientType() const {
     return clientType;
 }
+
+std::string getName() {
+    return name;
+}
+std::string getAddress() {
+    return address;
+}
+
+Type_ptr getClientType() {
+    return clientType;
+}
+
+boost::uuids::uuid getID() {
+    return UUID;
+}

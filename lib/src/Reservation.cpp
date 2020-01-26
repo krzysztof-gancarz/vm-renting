@@ -16,3 +16,4 @@ void Reservation::endReservation() {
     end = boost::posix_time::second_clock::universal_time();
     machine->endRent();
 }
+
