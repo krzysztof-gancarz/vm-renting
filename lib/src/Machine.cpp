@@ -1,12 +1,13 @@
 //
 // Created by student on 19.01.2020.
 //
-#include <Machine.h>
-#include "Exception.hpp"
+#include "Machine.h"
 
-Machine::Machine(std::string kernelVersion, std::string version,std::string os) :
-kernelVersion(kernelVersion), version(version), os(os){
-    if(kernelVersion=="") throw ParameterException("Kernel Vesion no set(Required)");
+
+Machine::Machine(std::string kernelVersion, std::string version, std::string os) {
+    this->kernelVersion = kernelVersion;
+    this->version = version;
+    this->os = os;
 }
 
 Machine::~Machine() {
@@ -25,9 +26,21 @@ std::string Machine::getOs() {
     return os;
 }
 
-string Machine::machineInfo() {
-    stringstream n;
+
+std::string Machine::machineInfo() {
+    std::stringstream n;
     n << kernelVersion << " : " << version << " : " << os << "\n";
 
     return n.str();
+}
+
+void Machine::endRent() {
+    isRented = false;
+}
+void Machine::startRent() {
+    isRented = true;
+}
+
+bool Machine::getStatus() {
+    return isRented;
 }

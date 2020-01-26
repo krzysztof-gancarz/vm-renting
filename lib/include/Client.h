@@ -1,4 +1,5 @@
-
+#ifndef VM_RENTING_CLIENT_H
+#define VM_RENTING_CLIENT_H
 
 #include <iostream>
 #include <memory>
@@ -25,3 +26,4 @@ public:
 };
 typedef std::shared_ptr  <Client> Client_ptr;
 
+#endif

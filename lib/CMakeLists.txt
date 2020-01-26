@@ -8,11 +8,11 @@ set(SOURCE_FILES
         src/ClientType.cpp
         src/Reservation.cpp
         src/Machine.cpp
-        src/Repository.cpp
-        src/ReservationsRepository.cpp
-        src/MachinesRepository.cpp
-        src/ClientsRepository.cpp
-        src/Exception.cpp
+        #src/Repository.cpp
+        #src/ReservationsRepository.cpp
+        #src/MachinesRepository.cpp
+        #src/ClientsRepository.cpp
+        #src/Exception.cpp
         src/ReservationsManager.cpp)
 
 
@@ -22,7 +22,7 @@ target_include_directories(Lib PUBLIC include)
 
 enable_testing()
 
-find_package (Boost 1.60.0 COMPONENTS "unit_test_framework" REQUIRED)
+find_package (Boost 1.60.0 COMPONENTS unit_test_framework date_time  REQUIRED)
 
 include_directories(
  ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -30,8 +30,10 @@ include_directories(
 )
 
 set(SOURCE_TEST_FILES
- test/master.cpp
- test/ClientTest.cpp)
+        test/master.cpp
+        test/ClientTest.cpp
+        test/MachineTest.cpp
+        test/ReservationTest.cpp)
 
 add_executable (TestLib ${SOURCE_TEST_FILES})
 
@@ -40,6 +42,7 @@ target_link_libraries (TestLib
  Lib
  ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
  )
+target_link_libraries( Lib ${Boost_DATE_TIME_LIBRARY} )
 
 
 add_test(TestAll TestLib

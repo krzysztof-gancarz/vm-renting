@@ -5,12 +5,14 @@
 #ifndef POBI_MACHINE_H
 #define POBI_MACHINE_H
 
+#include <string>
+#include <memory>
+#include <sstream>
 
-
-class Machine{
-    std:string kernelVersion;
-    std:string version;
-    std:string os;
+class Machine {
+    std::string kernelVersion;
+    std::string version;
+    std::string os;
     bool isRented;
 
 public:
@@ -22,6 +24,7 @@ public:
     void endRent();
     void startRent();
     std::string machineInfo();
+    bool getStatus();
 };
 
 typedef  std::shared_ptr <Machine> Machine_ptr;

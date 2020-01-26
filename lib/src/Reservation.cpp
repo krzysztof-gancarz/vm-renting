@@ -17,3 +17,16 @@ void Reservation::endReservation() {
     machine->endRent();
 }
 
+
+std::string Reservation::getBegin() {
+    return boost::posix_time::to_simple_string(begin);
+}
+
+std::string Reservation::getEnd() {
+    return boost::posix_time::to_simple_string(end);
+}
+
+bool Reservation::getInfo() {
+    return machine->getStatus();
+}
+
