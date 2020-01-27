@@ -3,8 +3,8 @@
 //
 
 #include "../include/ClientsRepository.h"
+#include "Exception.h"
 
-#include <iostream>
 
 void ClientsRepository::add(Client_ptr client) {
     items.push_back(client);
@@ -15,6 +15,9 @@ Client_ptr ClientsRepository::getById(boost::uuids::uuid UUID) {
         if (items[i]->getID() == UUID) {
             return items[i];
         }
+        else {
+            throw ParameterException("Brak takiego ID ");
+        }
     }
     return nullptr;
 }
@@ -22,6 +25,9 @@ int ClientsRepository::getIndexById(boost::uuids::uuid UUID) {
     for (int i = 0; i < items.size(); i++) {
         if (items[i]->getID() == UUID) {
             return i;
+        }
+        else {
+            throw ParameterException("Brak pasujacego indeksu ");
         }
     }
     return -1;
