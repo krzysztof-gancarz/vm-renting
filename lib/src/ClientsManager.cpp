@@ -3,6 +3,7 @@
 //
 
 #include "ClientsManager.h"
+#include <boost/uuid/uuid_io.hpp>
 
 ClientsManager::ClientsManager() {}
 
@@ -15,4 +16,8 @@ Client_ptr ClientsManager::getClient(int i) {
     return repo.getByIndex(i);
 }
 
-void ClientsManager::listClients() {}
+void ClientsManager::listClients() {
+    for(int i=0;i<repo.size();i++) {
+        std::cout<< i << ": " << repo.getByIndex(i)->getName()<< " " << repo.getByIndex(i)->getAddress() << " " << repo.getByIndex(i)->getBirthDate() << " " << repo.getByIndex(i)->getClientType() << "    #" << repo.getByIndex(i)->getID() << "\n";
+    }
+}
