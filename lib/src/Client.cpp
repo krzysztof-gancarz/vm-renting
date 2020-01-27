@@ -12,9 +12,9 @@ using namespace std;
 Client::Client(std::string name, std::string address, std::string birth, bool isVip) {
 
 
-    if(name=="") throw ParameterException("Brak nazwy klienta [REQUIRED].");
+    /*if(name=="") throw ParameterException("Brak nazwy klienta [REQUIRED].");
     if(address=="") throw ParameterException("Brak adresu klienta [REQUIRED].");
-    if(birth=="") throw ParameterException("Brak daty urodzenia klienta [REQUIRED].");
+    if(birth=="") throw ParameterException("Brak daty urodzenia klienta [REQUIRED].");*/
 
     this->name = name;
     this->address = address;
@@ -60,7 +60,7 @@ std::vector<Reservation_ptr> Client::getReservations() {
 }
 
 
-boost::uuids::uuid Client::getID() {
+boost::uuids::uuid Client::getUuid() {
     return UUID;
 }
 

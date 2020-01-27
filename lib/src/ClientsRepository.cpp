@@ -6,13 +6,14 @@
 #include "Exception.h"
 
 
+
 void ClientsRepository::add(Client_ptr client) {
     items.push_back(client);
 }
 
 Client_ptr ClientsRepository::getById(boost::uuids::uuid UUID) {
     for (int i = 0; i < items.size(); i++) {
-        if (items[i]->getID() == UUID) {
+        if (items[i]->getUuid() == UUID) {
             return items[i];
         }
         else {
@@ -23,7 +24,7 @@ Client_ptr ClientsRepository::getById(boost::uuids::uuid UUID) {
 }
 int ClientsRepository::getIndexById(boost::uuids::uuid UUID) {
     for (int i = 0; i < items.size(); i++) {
-        if (items[i]->getID() == UUID) {
+        if (items[i]->getUuid() == UUID) {
             return i;
         }
         else {
@@ -43,5 +44,12 @@ int ClientsRepository::size() {
 }
 
 Client_ptr ClientsRepository::getByIndex(int i) {
+    if(i>=items.size()){
+        return nullptr;
+    }
     return items[i];
+}
+
+ClientsRepository::~ClientsRepository() {
+
 }

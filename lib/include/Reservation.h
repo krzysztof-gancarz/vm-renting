@@ -27,6 +27,8 @@ public:
     std::string getBegin();
     std::string getEnd();
     bool checkIfEnded();
+    Machine_ptr getMachine();
+    Client_ptr getClient();
 
 
 };

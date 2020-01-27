@@ -43,5 +43,10 @@ int ReservationsRepository::size() {
 }
 
 Reservation_ptr ReservationsRepository::getByIndex(int i) {
+    if(i>=items.size()){
+        return nullptr;
+    }
     return items[i];
 }
+
+ReservationsRepository::~ReservationsRepository() {}

@@ -11,10 +11,10 @@
 class ReservationsManager {
     ReservationsRepository repo;
 public:
-    ReservationsManager();
     void createReservation(Client_ptr client, MachinesManager machineManager);
     void updateReservations(); //checks if reservations has ended
     void listReservations();
+    Reservation_ptr getReservation(int i);
 };
 
 #endif //VM_RENTING_RESERVATIONSMANAGER_H

@@ -14,8 +14,7 @@ class ReservationsRepository : public Repository{
     std::vector <Reservation_ptr> items;
 
 public:
-    ReservationsRepository();
-    virtual ~ReservationsRepository();
+    ~ReservationsRepository() override;
     Reservation_ptr getById(boost::uuids::uuid UUID);
     int getIndexById(boost::uuids::uuid UUID);
     Reservation_ptr getByIndex(int i);

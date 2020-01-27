@@ -32,7 +32,7 @@ public:
     std::string clientInfo();
     boost::gregorian::greg_year_month_day getBirthDate();
 
-    boost::uuids::uuid getID();
+    boost::uuids::uuid getUuid();
 
     const Type_ptr getClientType() const;
 };

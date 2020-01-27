@@ -41,3 +41,11 @@ bool Reservation::checkIfEnded() {
     }
     return false;
 }
+
+Client_ptr Reservation::getClient() {
+    return client;
+}
+
+Machine_ptr Reservation::getMachine() {
+    return machine;
+}

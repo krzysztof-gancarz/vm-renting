@@ -11,13 +11,12 @@ class MachinesRepository : public Repository {
 
     std::vector <Machine_ptr> items;
 public:
-    MachinesRepository();
     Machine_ptr getById(boost::uuids::uuid UUID);
     int getIndexById(boost::uuids::uuid UUID);
     Machine_ptr getByIndex(int i);
     void add(Machine_ptr machine);
     void remove(int i) override;
-    virtual ~MachinesRepository();
+    ~MachinesRepository() override;
     int size() override;
 
 

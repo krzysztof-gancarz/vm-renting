@@ -5,9 +5,6 @@
 #include "../include/MachinesRepository.h"
 #include "Exception.h"
 
-MachinesRepository::MachinesRepository() {
-
-}
 
 
 void MachinesRepository::add(Machine_ptr machine) {
@@ -46,5 +43,10 @@ int MachinesRepository::size() {
 }
 
 Machine_ptr MachinesRepository::getByIndex(int i) {
+    if(i>=items.size()){
+        return nullptr;
+    }
     return items[i];
 }
+
+MachinesRepository::~MachinesRepository() {}

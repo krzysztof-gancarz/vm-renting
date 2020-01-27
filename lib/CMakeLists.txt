@@ -12,7 +12,7 @@ set(SOURCE_FILES
         src/ReservationsRepository.cpp
         src/MachinesRepository.cpp
         src/ClientsRepository.cpp
-        #src/Exception.cpp
+        src/Exception.cpp
         src/ReservationsManager.cpp
         src/MachinesManager.cpp
         src/ClientsManager.cpp)
@@ -35,7 +35,9 @@ set(SOURCE_TEST_FILES
         test/master.cpp
         test/ClientTest.cpp
         test/MachineTest.cpp
-        test/ReservationTest.cpp)
+        test/ReservationTest.cpp
+        test/RepositoryTest.cpp
+        test/ManagerTest.cpp)
 
 add_executable (TestLib ${SOURCE_TEST_FILES})
 

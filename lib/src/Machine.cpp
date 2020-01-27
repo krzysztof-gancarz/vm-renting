@@ -11,10 +11,11 @@ Machine::Machine(std::string kernelVersion, std::string version, std::string os)
     this->version = version;
     this->os = os;
     this->UUID = boost::uuids::random_generator()();
+    this->isRented = false;
 
-    if(kernelVersion=="") throw ParameterException("Brak wersji kernela [REQUIRED].");
+    /*if(kernelVersion=="") throw ParameterException("Brak wersji kernela [REQUIRED].");
     if(version=="") throw ParameterException("Brak wersji [REQUIRED].");
-    if(os=="") throw ParameterException("Brak os [REQUIRED].");
+    if(os=="") throw ParameterException("Brak os [REQUIRED].");*/
 }
 
 Machine::~Machine() {

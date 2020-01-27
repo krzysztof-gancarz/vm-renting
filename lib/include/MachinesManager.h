@@ -10,9 +10,9 @@
 class MachinesManager {
     MachinesRepository repo;
 public:
-    MachinesManager();
     void createMachine(std::string kernelVersion, std::string version, std::string os);
     void listMachines();
+    Machine_ptr getMachine(int i);
     Machine_ptr getFreeMachine();
 
 };

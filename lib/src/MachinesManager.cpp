@@ -13,6 +13,10 @@ Machine_ptr MachinesManager::getFreeMachine() {
     return nullptr;
 }
 
+Machine_ptr MachinesManager::getMachine(int i) {
+    return repo.getByIndex(i);
+}
+
 void MachinesManager::createMachine(std::string kernelVersion, std::string version, std::string os) {
     Machine_ptr newMachine(new Machine(kernelVersion, version, os));
     repo.add(newMachine);
