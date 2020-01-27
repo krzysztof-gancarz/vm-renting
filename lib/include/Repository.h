@@ -8,7 +8,7 @@
 class Repository{
 
 public:
-
+    Repository();
     virtual void remove(int i) = 0;
     virtual ~Repository();
     virtual int size() = 0;

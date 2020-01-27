@@ -64,4 +64,5 @@ boost::uuids::uuid Client::getUuid() {
     return UUID;
 }
 
+
 typedef std::shared_ptr <Client> Client_ptr;

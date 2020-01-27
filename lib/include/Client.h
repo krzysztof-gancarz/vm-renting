@@ -19,7 +19,7 @@ class Client{
     std::vector<Reservation_ptr> reservations;
 public:
     Client(std::string name, std::string address, std::string birth, bool isVip);
-
+    virtual ~Client();
 
     Type_ptr setClientType(bool isVip);
 
