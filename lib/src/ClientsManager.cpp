@@ -18,6 +18,6 @@ Client_ptr ClientsManager::getClient(int i) {
 
 void ClientsManager::listClients() {
     for(int i=0;i<repo.size();i++) {
-        std::cout<< i << ": " << repo.getByIndex(i)->getName()<< " " << repo.getByIndex(i)->getAddress() << " " << repo.getByIndex(i)->getBirthDate() << " " << repo.getByIndex(i)->getClientType() << "    #" << repo.getByIndex(i)->getID() << "\n";
+        std::cout<< i << ": " << repo.getByIndex(i)->getName()<< " " << repo.getByIndex(i)->getAddress() << " " << boost::gregorian::to_simple_string(repo.getByIndex(i)->getBirthDate()) << " " << repo.getByIndex(i)->getClientType() << "    #" << repo.getByIndex(i)->getUuid() << "\n";
     }
 }

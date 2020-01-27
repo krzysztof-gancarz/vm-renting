@@ -47,8 +47,8 @@ std::string Client::getAddress() {
 std::string Client::getName() {
     return name;
 }
-boost::gregorian::greg_year_month_day Client::getBirthDate() {
-    return birthDate.year_month_day();
+boost::gregorian::date Client::getBirthDate() {
+    return birthDate;
 }
 
 void Client::addReservation(Reservation_ptr reservation) {
@@ -63,6 +63,7 @@ std::vector<Reservation_ptr> Client::getReservations() {
 boost::uuids::uuid Client::getUuid() {
     return UUID;
 }
-
+Client::~Client() {}
 
 typedef std::shared_ptr <Client> Client_ptr;
+

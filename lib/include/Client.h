@@ -19,7 +19,7 @@ class Client{
     std::vector<Reservation_ptr> reservations;
 public:
     Client(std::string name, std::string address, std::string birth, bool isVip);
-    virtual ~Client();
+    ~Client();
 
     Type_ptr setClientType(bool isVip);
 
@@ -30,7 +30,7 @@ public:
     std::string getName();
     std::string getAddress();
     std::string clientInfo();
-    boost::gregorian::greg_year_month_day getBirthDate();
+    boost::gregorian::date getBirthDate();
 
     boost::uuids::uuid getUuid();
 
