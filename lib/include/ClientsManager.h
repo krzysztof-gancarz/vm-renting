@@ -5,12 +5,15 @@
 #ifndef VM_RENTING_CLIENTSMANAGER_H
 #define VM_RENTING_CLIENTSMANAGER_H
 
+#include "ClientsRepository.h"
 
 class ClientsManager {
+    ClientsRepository repo;
 public:
     ClientsManager();
-    void createClient();
+    void createClient(std::string name, std::string address, std::string birth, bool isVip);
     void listClients();
+    Client_ptr getClient(int i);
 
 };
 

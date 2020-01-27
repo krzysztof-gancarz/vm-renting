@@ -34,3 +34,10 @@ boost::uuids::uuid Reservation::getUuid() {
     return UUID;
 }
 
+bool Reservation::checkIfEnded() {
+    if(end<boost::posix_time::second_clock::universal_time()) {
+        machine->endRent();
+        return true;
+    }
+    return false;
+}

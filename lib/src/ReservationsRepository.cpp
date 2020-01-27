@@ -5,9 +5,6 @@
 #include "ReservationsRepository.h"
 #include "Reservation.h"
 
-ReservationsRepository::ReservationsRepository() {
-
-}
 
 void ReservationsRepository::add(Reservation_ptr reservation) {
     items.push_back(reservation);
@@ -32,4 +29,12 @@ int ReservationsRepository::getIndexById(boost::uuids::uuid UUID) {
 
 void ReservationsRepository::remove(int i) {
     items.erase(items.begin()+i);
+}
+
+int ReservationsRepository::size() {
+    return items.size();
+}
+
+Reservation_ptr ReservationsRepository::getByIndex(int i) {
+    return items[i];
 }

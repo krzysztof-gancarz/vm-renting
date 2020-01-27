@@ -5,11 +5,15 @@
 #ifndef VM_RENTING_MACHINESMANAGER_H
 #define VM_RENTING_MACHINESMANAGER_H
 
+#include "MachinesRepository.h"
+
 class MachinesManager {
+    MachinesRepository repo;
 public:
     MachinesManager();
-    void createMachine();
+    void createMachine(std::string kernelVersion, std::string version, std::string os);
     void listMachines();
+    Machine_ptr getFreeMachine();
 
 };
 

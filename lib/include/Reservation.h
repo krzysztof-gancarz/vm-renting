@@ -26,6 +26,7 @@ public:
     boost::uuids::uuid getUuid();
     std::string getBegin();
     std::string getEnd();
+    bool checkIfEnded();
 
 
 };

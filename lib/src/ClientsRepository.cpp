@@ -31,3 +31,11 @@ void ClientsRepository::remove(int i) {
     items.erase(items.begin()+i);
 
 }
+
+int ClientsRepository::size() {
+    return items.size();
+}
+
+Client_ptr ClientsRepository::getByIndex(int i) {
+    return items[i];
+}

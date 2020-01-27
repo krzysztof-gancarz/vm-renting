@@ -14,9 +14,11 @@ public:
     MachinesRepository();
     Machine_ptr getById(boost::uuids::uuid UUID);
     int getIndexById(boost::uuids::uuid UUID);
+    Machine_ptr getByIndex(int i);
     void add(Machine_ptr machine);
-    void remove(int i);
+    void remove(int i) override;
     virtual ~MachinesRepository();
+    int size() override;
 
 
 };

@@ -33,3 +33,11 @@ int MachinesRepository::getIndexById(boost::uuids::uuid UUID) {
 void MachinesRepository::remove(int i) {
     items.erase(items.begin() + i);
 }
+
+int MachinesRepository::size() {
+    return items.size();
+}
+
+Machine_ptr MachinesRepository::getByIndex(int i) {
+    return items[i];
+}

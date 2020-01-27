@@ -9,9 +9,9 @@ class Repository{
 
 public:
 
-    virtual void add() = 0;
-    virtual void remove() = 0;
+    virtual void remove(int i) = 0;
     virtual ~Repository();
+    virtual int size() = 0;
 
 };
 

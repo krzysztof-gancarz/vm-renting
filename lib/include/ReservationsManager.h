@@ -6,12 +6,13 @@
 #define VM_RENTING_RESERVATIONSMANAGER_H
 
 #include "ReservationsRepository.h"
-#include "MachinesRepository.h"
+#include "MachinesManager.h"
 
 class ReservationsManager {
+    ReservationsRepository repo;
 public:
     ReservationsManager();
-    void createReservation(Client_ptr client);
+    void createReservation(Client_ptr client, MachinesManager machineManager);
     void updateReservations(); //checks if reservations has ended
     void listReservations();
 };

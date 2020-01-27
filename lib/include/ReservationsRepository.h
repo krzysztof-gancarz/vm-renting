@@ -18,8 +18,10 @@ public:
     virtual ~ReservationsRepository();
     Reservation_ptr getById(boost::uuids::uuid UUID);
     int getIndexById(boost::uuids::uuid UUID);
+    Reservation_ptr getByIndex(int i);
     void add(Reservation_ptr reservation);
-    void remove(int i);
+    void remove(int i) override;
+    int size() override;
 };
 
 
